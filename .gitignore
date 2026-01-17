@@ -1,0 +1,10 @@
+# Ignore compiled binaries
+vcs_core/vcs
+
+# Ignore object files
+*.o
+*.out
+
+# macOS junk
+.DS_Store
+

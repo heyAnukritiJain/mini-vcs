@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini VCS - Version History</title>
+</head>
+<body>
+  <h2>Version History</h2>
+  <ul id="history"></ul>
+
+  <script>
+    fetch("versions.json")
+      .then(response => response.json())
+      .then(data => {
+        const list = document.getElementById("history");
+
+        data.forEach(v => {
+          const li = document.createElement("li");
+          li.textContent = `${v.version} | ${v.message} | ${v.created_at}`;
+          list.appendChild(li);
+        });
+      })
+      .catch(err => {
+        document.body.innerHTML += "<p>Error loading data</p>";
+        console.error(err);
+      });
+  </script>
+</body>
+</html>
