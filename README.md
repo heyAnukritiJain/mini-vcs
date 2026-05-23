@@ -71,19 +71,19 @@ mini-vcs/
 
 # CLI Commands
 
-Initialize VCS in current directory
+# Initialize VCS in current directory
 ./vcs init
 
-Take a snapshot with a commit message
+# Take a snapshot with a commit message
 ./vcs commit "your commit message"
 
-View full commit history
+# View full commit history
 ./vcs log
 
-Roll back to a specific version
+# Roll back to a specific version
 ./vcs rollback <version_id>
 
-Export history to JSON
+# Export history to JSON
 ./vcs export
 
 ---
